@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Study Material - Sync Campus</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page-box">
+    <h2>Upload Study Material</h2>
+    <form id="materialForm">
+      <input type="text" name="title" placeholder="Title of Material" required />
+      <textarea name="description" placeholder="Description or summary..." required></textarea>
+      <select name="subject" required>
+        <option value="">Select Subject</option>
+        <option value="Maths">Maths</option>
+        <option value="Data Structures">Data Structures</option>
+        <option value="OS">Operating Systems</option>
+        <option value="AI">Artificial Intelligence</option>
+      </select>
+      <select name="semester" required>
+        <option value="">Select Semester</option>
+        <option value="Sem 1">Semester 1</option>
+        <option value="Sem 2">Semester 2</option>
+        <option value="Sem 3">Semester 3</option>
+        <option value="Sem 4">Semester 4</option>
+      </select>
+      <input type="file" name="materialFile" accept=".pdf,.mp4,.jpg,.jpeg,.png,.docx" />
+      <button type="submit">Upload Material</button>
+    </form>
+    <a href="faculty-dashboard.html" class="back-link">⬅ Back to Dashboard</a>
+  </div>
+
+  <script>
+    document.getElementById("materialForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Study Material uploaded (mock) – Backend integration soon!");
+    });
+  </script>
+</body>
+</html>

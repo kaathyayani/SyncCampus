@@ -1,0 +1,139 @@
+/* ==== Global Page Layout Utilities ==== */
+
+:root {
+  --primary-dark: #0f4c81;
+  --primary-dark-hover: #093559;
+  --primary-bg1: #1e5799;
+  --primary-bg2: #2989d8;
+  --primary-bg3: #207cca;
+  --primary-bg4: #7db9e8;
+  --card-bg: #f0f4f8;
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --shadow-lg: 0 0 25px rgba(0,0,0,0.12);
+  --shadow-md: 0 0 20px rgba(0,0,0,0.08);
+}
+
+/* Use gradient campus background on all content pages except login
+   (login already looks good; this won't hurt it but you can override if needed) */
+body {
+  background: linear-gradient(
+    to bottom right,
+    var(--primary-bg1),
+    var(--primary-bg2),
+    var(--primary-bg3),
+    var(--primary-bg4)
+  );
+}
+
+/* Reusable centered white container */
+.page-box {
+  background: #fff;
+  width: 90%;              /* fills wide, leaves small margin */
+  max-width: 800px;        /* good on desktop */
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Section headings */
+.page-box h2,
+.page-box h1 {
+  text-align: center;
+  color: var(--primary-dark);
+  margin-bottom: 30px;
+}
+
+/* Reusable grid cards (dashboards) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Reusable card */
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.card:hover {
+  background: #d9e9f5;
+  transform: translateY(-4px);
+}
+
+/* Back link / logout */
+.back-link,
+.logout {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  text-decoration: none;
+  color: var(--primary-dark);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Form elements (shared) */
+.page-box input[type="text"],
+.page-box input[type="email"],
+.page-box input[type="password"],
+.page-box input[type="file"],
+.page-box input[type="url"],
+.page-box select,
+.page-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.page-box textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.page-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-dark);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.page-box button:hover {
+  background-color: var(--primary-dark-hover);
+}
+
+/* Tables */
+.page-box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.page-box th,
+.page-box td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+.page-box th {
+  background: var(--card-bg);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .page-box {
+    margin: 20px auto;
+    padding: 20px;
+  }
+}

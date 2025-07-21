@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Analysis - Sync Campus</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page-box">
+    <h2>Feedback Form Analysis</h2>
+    <input type="url" id="feedbackLink" placeholder="Paste Google Form or feedback data link..." />
+    <button onclick="analyzeFeedback()">Analyze Feedback</button>
+
+    <div id="analysis" style="display:none; margin-top:30px;">
+      <h3 style="text-align:center;">📈 Sample Analysis</h3>
+      <p>Q1: Faculty Clarity – ⭐⭐⭐⭐☆ (4.2/5)</p>
+      <p>Q2: Punctuality – ⭐⭐⭐⭐⭐ (4.8/5)</p>
+      <p>Q3: Interaction – ⭐⭐⭐⭐☆ (4.0/5)</p>
+      <p>Q4: Materials – ⭐⭐⭐⭐☆ (4.3/5)</p>
+    </div>
+
+    <a href="admin-dashboard.html" class="back-link">⬅ Back to Dashboard</a>
+  </div>
+
+  <script>
+    function analyzeFeedback() {
+      document.getElementById('analysis').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

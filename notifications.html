@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Send Notification - Sync Campus</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page-box">
+    <h2>Send Notification</h2>
+    <form id="notifyForm">
+      <input type="text" name="title" placeholder="Notification Title" required />
+      <textarea name="message" placeholder="Write your message here..." required></textarea>
+      <select name="target" required>
+        <option value="">Select Target Audience</option>
+        <option value="all">All Users</option>
+        <option value="student">Students Only</option>
+        <option value="faculty">Faculty Only</option>
+        <option value="batchA">Batch A</option>
+        <option value="batchB">Batch B</option>
+      </select>
+      <button type="submit">Send Notification</button>
+    </form>
+    <!-- Back smart-link: use history back if we don't know role -->
+    <a href="javascript:history.back()" class="back-link">⬅ Back</a>
+  </div>
+
+  <script>
+    document.getElementById("notifyForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Notification sent (mock) — Backend connection coming soon!");
+    });
+  </script>
+</body>
+</html>

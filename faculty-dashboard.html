@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faculty Dashboard - Sync Campus</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .dashboard-box {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 800px;
+      margin: 50px auto;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .dashboard-box h2 {
+      color: #0f4c81;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 20px;
+      background: #f0f4f8;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      background-color: #d9e9f5;
+      transform: translateY(-5px);
+    }
+
+    .logout {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #0f4c81;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-box">
+    <h2>Welcome, Faculty!</h2>
+    <div class="card-grid">
+      <div class="card">👨‍🎓 View Assigned Students</div>
+      <div class="card">📤 Upload Study Materials</div>
+      <div class="card">🧾 View Attendance</div>
+      <div class="card">🔔 Send Notifications</div>
+      <div class="card">🎭 Manage Hobby Clubs</div>
+    </div>
+    <a href="login.html" class="logout">Logout</a>
+  </div>
+</body>
+</html>
